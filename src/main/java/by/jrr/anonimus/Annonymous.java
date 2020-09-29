@@ -44,6 +44,24 @@ public class Annonymous {
 
         elnglishGreeting.greet();
         ukraineGreeting.greet();
+
+        HelloWorld polandGreeting = new HelloWorld() {
+
+            public static final String login = "";
+            @Override
+            public void greet() {
+                log.info("slava Poland!");
+            }
+
+            @Override
+            public void greetSomeone(String someone) {
+                log.info("Hello, druze {}", name);
+            }
+        };
+
+        log.info("elnglishGreeting {}", elnglishGreeting.getClass().getName());
+        log.info("ukraineGreeting {}", ukraineGreeting.getClass().getName());
+        log.info("polandGreeting {}", polandGreeting.getClass().getName());
     }
 
 }
